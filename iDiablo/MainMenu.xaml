@@ -6,7 +6,47 @@
         xmlns:local="clr-namespace:iDiablo"
         mc:Ignorable="d"
         Title="MainMenu" Height="450" Width="800">
-    <Grid>
-        
+    <Window.Resources>
+        <Style x:Key="CustomButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#FF807B52"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#b6b396"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="MainGrid" Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <MediaElement Name="Song" LoadedBehavior="Manual" UnloadedBehavior="Manual"/>
+        <Label Content="iDiablo" HorizontalAlignment="Center" Width="266" Foreground="#FF807B52" FontSize="50" FontFamily="Diablo" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0,0,0,0" Grid.Column="1" Margin="0,62,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="SinglePlay" Content="Single Player" Grid.Row="2" Grid.Column="1" MouseEnter="Sound_MouseEnter" Height="62" Click="SinglePlay_Click"  FontSize="40" FontFamily="Diablo" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource CustomButtonStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="267" Grid.ColumnSpan="2"/>
+        <Button x:Name="MultiPlay" Content="Multi Player" Grid.Row="2" Grid.Column="1" MouseEnter="Sound_MouseEnter" Click="MultiPlayer_Click" FontSize="40" FontFamily="Diablo" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource CustomButtonStyle}" Margin="0,62,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="Settings" Content="Settings" Grid.Row="3" Grid.Column="1" MouseEnter="Sound_MouseEnter" HorizontalAlignment="Center" Width="267" Click="Settings_Click" FontSize="40" FontFamily="Diablo" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource CustomButtonStyle}" Margin="0,62,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="Exit" Content="Exit iDiablo" Grid.Row="4" Grid.Column="1" MouseEnter="Sound_MouseEnter" VerticalAlignment="Top" Height="62" Click="Exit_Click" FontSize="40" FontFamily="Diablo" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource CustomButtonStyle}" Grid.ColumnSpan="2" Margin="0,62,266,0" Grid.RowSpan="2"/>
     </Grid>
 </Window>

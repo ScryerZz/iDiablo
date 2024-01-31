@@ -6,15 +6,44 @@
         xmlns:local="clr-namespace:iDiablo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" FontFamily="Diablo">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#00000000"/>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF3333"/>
+                        <GradientStop Color="#FFDACB26" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" Value="#00000000"/>
+                                <Setter Property="Foreground">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFDACB26"/>
+                                            <GradientStop Color="#FFFF3333" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Frame Content="Frame" Background="Black"/>
-        <Button Content="Start iDiablo" HorizontalAlignment="Center" Height="135" VerticalAlignment="Center" Width="478" Click="Button_Click" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}">
-            <Button.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Red"/>
-                    <GradientStop Color="#FFDACB26" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Foreground>
+        <Button Content="Start iDiablo" HorizontalAlignment="Center" Height="135" VerticalAlignment="Center" Width="478" Click="Button_Click" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyle}">
         </Button>
     </Grid>
 </Window>
