@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iDiablo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontFamily="Diablo">
+        d:DesignHeight="1080" d:DesignWidth="1920"
+        Title="MainWindow" FontFamily="Diablo">
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="#00000000"/>
@@ -43,7 +44,7 @@
     </Window.Resources>
     <Grid>
         <Frame Content="Frame" Background="Black"/>
-        <Button Content="Start iDiablo" HorizontalAlignment="Center" Height="135" VerticalAlignment="Center" Width="478" Click="Button_Click" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyle}">
+        <Button Content="Start iDiablo" HorizontalAlignment="Center" Height="135" Width="478" VerticalAlignment="Center" Click="Button_Click" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyle}">
         </Button>
     </Grid>
 </Window>

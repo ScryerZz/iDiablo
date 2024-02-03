@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace iDiablo
@@ -22,6 +23,27 @@ namespace iDiablo
         public MainMenu()
         {
             InitializeComponent();
+        }
+
+        private void SinglePlay_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void MultiPlayer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
