@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace iDiablo
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для MultiPlayer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MultiPlayer : Page
     {
-        public MainWindow()
+        public MultiPlayer()
         {
             InitializeComponent();
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            frame.NavigationService.Navigate(new MainMenu());
-        }
-
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    MainMenu mainMenu = new MainMenu();
-        //    mainMenu.Show();
-        //    Close();
-        //}
     }
 }

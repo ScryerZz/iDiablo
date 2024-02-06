@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace iDiablo
@@ -17,7 +18,7 @@ namespace iDiablo
     /// <summary>
     /// Логика взаимодействия для SinglePlayer.xaml
     /// </summary>
-    public partial class SinglePlayer : Window
+    public partial class SinglePlayer : Page
     {
         public SinglePlayer()
         {

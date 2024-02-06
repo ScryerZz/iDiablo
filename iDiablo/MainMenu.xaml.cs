@@ -18,7 +18,7 @@ namespace iDiablo
     /// <summary>
     /// Логика взаимодействия для MainMenu.xaml
     /// </summary>
-    public partial class MainMenu : Window
+    public partial class MainMenu : Page
     {
         public MainMenu()
         {
@@ -27,18 +27,16 @@ namespace iDiablo
 
         private void SinglePlay_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.Show();
-        }
-
-        private void Settings_Click(object sender, RoutedEventArgs e)
-        {
-            
+            NavigationService.Navigate(new SinglePlayer());
         }
 
         private void MultiPlayer_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new MultiPlayer());
+        }
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SettingsMenu());
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)

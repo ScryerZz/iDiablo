@@ -5,6 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iDiablo"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip" AllowsTransparency="True"
         d:DesignHeight="1080" d:DesignWidth="1920"
         Title="MainWindow" FontFamily="Diablo">
     <Window.Resources>
@@ -43,8 +47,8 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Frame Content="Frame" Background="Black"/>
-        <Button Content="Start iDiablo" HorizontalAlignment="Center" Height="135" Width="478" VerticalAlignment="Center" Click="Button_Click" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyle}">
-        </Button>
+        <Frame x:Name="frame" Content="Frame" NavigationUIVisibility="Hidden" Background="Black"/>
+        <!--<Button Content="Start iDiablo" HorizontalAlignment="Center" Height="135" Width="478" VerticalAlignment="Center" Click="Button_Click" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyle}">
+        </Button>-->
     </Grid>
 </Window>
