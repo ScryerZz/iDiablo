@@ -59,6 +59,6 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="Back" Content="⬅" Height="150" Width="600" Grid.Row="0" Grid.Column="0" FontFamily="Diablo" FontSize="150" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="Back" Content="↫" Height="150" Width="600" FontFamily="Diablo" FontSize="150" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}" FontWeight="Bold"/>
     </Grid>
 </Page>
