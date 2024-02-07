@@ -67,7 +67,6 @@
             </Label.Foreground>
         </Label>
 
-        <!--<Frame x:Name="frame" Content="Frame" Height="1080" Width="1920" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" NavigationUIVisibility="Hidden"/>-->
         <Button x:Name="SinglePlayer" Content="Single Player" Height="150" Width="600" Grid.Row="2" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SinglePlay_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="MultiPlay" Content="Multi Player" Height="150" Width="600" Grid.Row="3" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MultiPlayer_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="Settings" Content="Settings" Height="150" Width="600" Grid.Row="4" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Settings_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
