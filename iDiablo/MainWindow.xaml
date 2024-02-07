@@ -48,6 +48,22 @@
     </Window.Resources>
     <Grid>
         <Frame x:Name="frame" Content="Frame" NavigationUIVisibility="Hidden" Background="Black"/>
+        <Rectangle x:Name="Rectangle" Height="1080" Width="1920" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Rectangle.Fill>
+                <SolidColorBrush x:Name="MySolidColorBrush" Color="Black" />
+            </Rectangle.Fill>
+            <Rectangle.Triggers>
+                <EventTrigger RoutedEvent="Rectangle.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                                             To="0.0" Duration="0:0:0.7"/>
+                            <!--<PointAnimation Storyboard.TargetProperty="Point"/>-->
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Rectangle.Triggers>
+        </Rectangle>
         <!--<Button Content="Start iDiablo" HorizontalAlignment="Center" Height="135" Width="478" VerticalAlignment="Center" Click="Button_Click" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyle}">
         </Button>-->
     </Grid>
