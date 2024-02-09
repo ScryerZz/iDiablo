@@ -7,12 +7,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="free-icon-go-back-arrow-17699.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="free-icon-go-back-arrow-17699.png" />
-  </ItemGroup>
-
 </Project>

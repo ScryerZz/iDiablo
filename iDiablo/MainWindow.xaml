@@ -47,24 +47,26 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Frame x:Name="frame" Content="Frame" NavigationUIVisibility="Hidden" Background="Black"/>
-        <Rectangle x:Name="Rectangle" Height="1080" Width="1920" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Rectangle.Fill>
-                <SolidColorBrush x:Name="MySolidColorBrush" Color="Black" />
-            </Rectangle.Fill>
-            <Rectangle.Triggers>
-                <EventTrigger RoutedEvent="Rectangle.MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity" 
-                                             To="0.0" Duration="0:0:0.7"/>
-                            <!--<PointAnimation Storyboard.TargetProperty="Point"/>-->
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </Rectangle.Triggers>
-        </Rectangle>
-        <!--<Button Content="Start iDiablo" HorizontalAlignment="Center" Height="135" Width="478" VerticalAlignment="Center" Click="Button_Click" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyle}">
-        </Button>-->
+        <Frame x:Name="frame" Content="Frame" NavigationUIVisibility="Hidden" Background="Black" Margin="0,0,0,0"/>
+        <Canvas x:Name="Canvas" Background="#00000000" Visibility="Visible">
+            <Rectangle x:Name="Rectangle" Height="1080" Width="1920" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Center" IsHitTestVisible="False">
+                <Rectangle.Fill>
+                    <SolidColorBrush x:Name="MySolidColorBrush" Color="Black" />
+                </Rectangle.Fill>
+                <Rectangle.Triggers>
+                    <EventTrigger RoutedEvent="Rectangle.MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                                     To="0.0" Duration="0:0:0.8"/>
+                                <!--<DoubleAnimation Storyboard.TargetName="Rectangle" 
+                                     Storyboard.TargetProperty="(Canvas.Left)"
+                                     To="2000.0" Duration="0:0:0.10"/>-->
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Rectangle.Triggers>
+            </Rectangle>
+        </Canvas>
     </Grid>
 </Window>
