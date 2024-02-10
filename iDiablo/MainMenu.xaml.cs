@@ -43,5 +43,10 @@ namespace iDiablo
         {
             Application.Current.Shutdown();
         }
+
+        private void Credits_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new CreditsPage());
+        }
     }
 }

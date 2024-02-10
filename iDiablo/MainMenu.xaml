@@ -42,7 +42,7 @@
             </Setter>
         </Style>
     </Page.Resources>
-    <Grid x:Name="MainGrid" Background="Black">
+    <Grid x:Name="MainGrid" Background="#FF161616">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -58,7 +58,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="title" Content="iDiablo" Height="150" Width="600" Padding="0,0,0,0" Grid.Column="1" FontFamily="Diablo" FontSize="125" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Grid.Row="1">
+        <Label x:Name="title" Content="iDiablo" Height="150" Width="600" Padding="0,0,0,0" Grid.Column="1" Grid.Row="1" FontFamily="Diablo" FontSize="125" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFF3333"/>
@@ -71,6 +71,6 @@
         <Button x:Name="MultiPlay" Content="Multi Player" Height="150" Width="600" Grid.Row="3" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MultiPlayer_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="Settings" Content="Settings" Height="150" Width="600" Grid.Row="4" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Settings_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="Exit" Content="Exit iDiablo" Height="150" Width="600" Grid.Row="5" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Exit_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
-        <Button x:Name="Credits" Content="Credits" Height="150" Width="600" Grid.Row="6" FontFamily="DiabloFont" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Exit_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="Credits" Content="Credits" Height="150" Width="600" Grid.Row="6" FontFamily="DiabloFont" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Credits_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
     </Grid>
 </Page>

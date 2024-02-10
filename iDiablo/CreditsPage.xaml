@@ -1,4 +1,4 @@
-﻿<Page x:Class="iDiablo.SettingsMenu"
+﻿<Page x:Class="iDiablo.CreditsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:iDiablo"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="SettingsMenu" FontFamily="Diablo">
+      Title="CreditsPage" FontFamily="Diablo">
     <Page.Resources>
         <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="#00000000"/>
@@ -59,6 +59,31 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="Back" Content="↫" Height="150" Width="600" FontFamily="Diablo" FontSize="150" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}" FontWeight="Bold"/>
+        <Label x:Name="title" Content="Created By" Height="150" Width="600" Padding="0,0,0,0" Grid.Column="1" Grid.Row="1" FontFamily="A Anggaran Dasar" FontSize="100" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF3333"/>
+                    <GradientStop Color="#FFDACB26" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="creator" Content="ScryerZz" Height="150" Width="600" Padding="0,0,0,0" Grid.Column="1" Grid.Row="2" FontFamily="20th Centenary Faux" FontSize="75" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF3333"/>
+                    <GradientStop Color="#FFDACB26" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="sveTilo" Content="SveTilo" Height="150" Width="600" Padding="0,0,0,0" Grid.Column="1" Grid.Row="3" FontFamily="20th Centenary Faux" FontSize="75" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF3333"/>
+                    <GradientStop Color="#FFDACB26" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button x:Name="Back" Content="↫" Height="150" Width="600" Grid.Column="0" Grid.Row="0" FontFamily="Diablo" FontSize="150" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="GitHub" Content="Go to my GitHub" Height="150" Width="600" Grid.Column="1" Grid.Row="4" FontFamily="20th Centenary Faux" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="GitHub_Click" BorderBrush="{x:Null}" Style="{StaticResource ButtonStyle}"/>
     </Grid>
 </Page>

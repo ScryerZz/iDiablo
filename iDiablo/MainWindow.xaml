@@ -10,63 +10,19 @@
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip" AllowsTransparency="True"
         d:DesignHeight="1080" d:DesignWidth="1920"
-        Title="MainWindow" FontFamily="Diablo">
-    <Window.Resources>
-        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="#00000000"/>
-            <Setter Property="Foreground">
-                <Setter.Value>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFFF3333"/>
-                        <GradientStop Color="#FFDACB26" Offset="1"/>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" Value="#00000000"/>
-                                <Setter Property="Foreground">
-                                    <Setter.Value>
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="#FFDACB26"/>
-                                            <GradientStop Color="#FFFF3333" Offset="1"/>
-                                        </LinearGradientBrush>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
+        Title="MainWindow" FontFamily="Diablo" Background="Black">
     <Grid>
-        <Frame x:Name="frame" Content="Frame" NavigationUIVisibility="Hidden" Background="Black" Margin="0,0,0,0"/>
-        <Canvas x:Name="Canvas" Background="#00000000" Visibility="Visible">
-            <Rectangle x:Name="Rectangle" Height="1080" Width="1920" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Center" IsHitTestVisible="False">
-                <Rectangle.Fill>
-                    <SolidColorBrush x:Name="MySolidColorBrush" Color="Black" />
-                </Rectangle.Fill>
-                <Rectangle.Triggers>
-                    <EventTrigger RoutedEvent="Rectangle.MouseEnter">
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="Opacity" 
-                                     To="0.0" Duration="0:0:0.8"/>
-                                <!--<DoubleAnimation Storyboard.TargetName="Rectangle" 
-                                     Storyboard.TargetProperty="(Canvas.Left)"
-                                     To="2000.0" Duration="0:0:0.10"/>-->
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </Rectangle.Triggers>
-            </Rectangle>
-        </Canvas>
+        <Frame x:Name="frame" Content="Frame" NavigationUIVisibility="Hidden" Margin="0,0,0,0" Opacity="0">
+            <Frame.Triggers>
+                <EventTrigger RoutedEvent="Frame.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                                     To="1.0" Duration="0:0:0.8"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Frame.Triggers>
+        </Frame>
     </Grid>
 </Window>
