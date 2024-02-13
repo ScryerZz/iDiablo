@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,5 +30,11 @@ namespace iDiablo
         {
             NavigationService.GoBack();
         }
-    }
+
+        private void GitHub_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://github.com/ScryerZz") { UseShellExecute = true });
+
+        }
+    }           
 }

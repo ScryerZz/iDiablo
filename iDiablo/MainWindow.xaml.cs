@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,7 +28,11 @@ namespace iDiablo
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            frame.NavigationService.Navigate(new MainMenu());
+            SoundPlayer sp = new SoundPlayer();
+            frame.NavigationService.Navigate(new MainMenu(sp));
+            sp.SoundLocation = "Musics/musicMenu.wav";
+            sp.Load();
+            sp.PlayLooping();
         }
 
         //private void Button_Click(object sender, RoutedEventArgs e)

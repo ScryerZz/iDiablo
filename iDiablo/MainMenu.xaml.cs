@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,9 +21,11 @@ namespace iDiablo
     /// </summary>
     public partial class MainMenu : Page
     {
-        public MainMenu()
+        SoundPlayer sp;
+        public MainMenu(SoundPlayer player)
         {
             InitializeComponent();
+            sp = player;
         }
 
         private void SinglePlay_Click(object sender, RoutedEventArgs e)
@@ -47,6 +50,16 @@ namespace iDiablo
         private void Credits_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new CreditsPage());
+        }
+
+        private void MuteMusic_Click(object sender, RoutedEventArgs e)
+        {
+            sp.Stop();
+        }
+        
+        private void PlayMusic_Click(object sender, RoutedEventArgs e)
+        {
+            sp.Play();
         }
     }
 }
