@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,7 +31,7 @@ namespace iDiablo
 
         private void SinglePlay_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SinglePlayer());
+            //Thread.Sleep(500);
         }
 
         private void MultiPlayer_Click(object sender, RoutedEventArgs e)
@@ -54,12 +55,21 @@ namespace iDiablo
 
         private void MuteMusic_Click(object sender, RoutedEventArgs e)
         {
-            sp.Stop();
+            if (Convert.ToString(MuteMusic.Content) == "🔉")
+            {
+                sp.Stop();
+                MuteMusic.Content = "🔇";
+            }
+            else
+            {
+                sp.PlayLooping();
+                MuteMusic.Content = "🔉";
+            }
         }
-        
-        private void PlayMusic_Click(object sender, RoutedEventArgs e)
+
+        private void DoubleAnimation_Completed(object sender, EventArgs e)
         {
-            sp.Play();
+            NavigationService.Navigate(new SinglePlayer());
         }
     }
 }

@@ -9,6 +9,8 @@
       Title="MainMenu" FontFamily="Diablo">
     <Page.Resources>
         <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="150"></Setter>
+            <Setter Property="Width" Value="600"></Setter>
             <Setter Property="Background" Value="#00000000"/>
             <Setter Property="Foreground">
                 <Setter.Value>
@@ -25,7 +27,7 @@
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
+                            <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#00000000"/>
                                 <Setter Property="Foreground">
                                     <Setter.Value>
@@ -67,12 +69,57 @@
             </Label.Foreground>
         </Label>
 
-        <Button x:Name="SinglePlayer" Content="Single Player" Height="150" Width="600" Grid.Row="2" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SinglePlay_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="SinglePlayer" Content="Single Player" Height="150" Width="600" Grid.Row="2" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="SinglePlay_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}">
+            <Button.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="300" CenterY="75"/>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="0.88"
+                                                         Duration="0:0:0.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="1"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="0.88"
+                                                         Duration="0:0:0.5" Completed="DoubleAnimation_Completed">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="1"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                                         Duration="0:0:0.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="1"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                                         Duration="0:0:0.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="1"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
         <Button x:Name="MultiPlay" Content="Multi Player" Height="150" Width="600" Grid.Row="3" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MultiPlayer_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="Settings" Content="Settings" Height="150" Width="600" Grid.Row="4" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Settings_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="Exit" Content="Exit iDiablo" Height="150" Width="600" Grid.Row="5" Grid.Column="1" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Exit_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="Credits" Content="Credits" Height="150" Width="600" Grid.Row="6" Grid.Column="0" FontFamily="DiabloFont" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Credits_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
-        <Button x:Name="MuteMusic" Content="🔇" Height="150" Width="300" Grid.Row="6" Grid.Column="2" FontFamily="DiabloFont" FontSize="45" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MuteMusic_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}" Margin="20,0,0,0"/>
-        <Button x:Name="PlayMusic" Content="🔉" Height="150" Width="300" Grid.Row="6" Grid.Column="2" FontFamily="DiabloFont" FontSize="45" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="PlayMusic_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}" Margin="320,0,0,0"/>
+        <Button x:Name="MuteMusic" Content="🔉" Height="150" Width="600" Grid.Column="2" FontFamily="DiabloFont" FontSize="45" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MuteMusic_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}"/>
     </Grid>
 </Page>
