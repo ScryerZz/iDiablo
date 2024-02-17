@@ -28,13 +28,22 @@ namespace iDiablo
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            //NavigationService.GoBack();
         }
 
         private void GitHub_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start(new ProcessStartInfo("https://github.com/ScryerZz") { UseShellExecute = true });
+            //Process.Start(new ProcessStartInfo("https://github.com/ScryerZz") { UseShellExecute = true });
+        }
 
+        private void DoubleAnimation_Completed_Back(object sender, EventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void DoubleAnimation_Completed_Git(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://github.com/ScryerZz") { UseShellExecute = true });
         }
     }           
 }
