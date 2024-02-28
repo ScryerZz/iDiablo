@@ -84,7 +84,7 @@
             </Label.Foreground>
         </Label>
 
-        <Button x:Name="Back" Content="↫" Height="150" Width="600" Grid.Column="0" Grid.Row="0" FontFamily="Diablo" FontSize="150" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}">
+        <Button x:Name="Back" Content="↞" Height="150" Width="600" Grid.Column="0" Grid.Row="0" FontFamily="Diablo" FontSize="100" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}">
             <Button.RenderTransform>
                 <ScaleTransform ScaleX="1" ScaleY="1" CenterX="300" CenterY="75"/>
             </Button.RenderTransform>

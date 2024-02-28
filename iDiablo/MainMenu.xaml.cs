@@ -70,7 +70,7 @@ namespace iDiablo
 
         private void DoubleAnimation_Completed_SP(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new SinglePlayer());
+            NavigationService.Navigate(new ClassSelection());
         }
 
         private void DoubleAnimation_Completed_MP(object sender, EventArgs e)

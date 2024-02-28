@@ -8,6 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Classes\rogue.png" />
+    <None Remove="Images\Classes\warrior.png" />
+    <None Remove="Images\Classes\wizard.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Classes\rogue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Classes\warrior.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Classes\wizard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Musics\musicMenu.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
