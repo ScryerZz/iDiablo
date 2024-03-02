@@ -59,7 +59,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="Back" Content="↞" Height="150" Width="600" FontFamily="Diablo" FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}" FontWeight="Bold">
+        <Button x:Name="Back" Content="↞" Height="108" Width="100" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}" FontWeight="Bold" Margin="10,0,0,0">
             <Button.RenderTransform>
                 <ScaleTransform ScaleX="1" ScaleY="1" CenterX="300" CenterY="75"/>
             </Button.RenderTransform>

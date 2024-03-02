@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:iDiablo"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920"
+      d:DesignWidth="1920" d:DesignHeight="1080"
       Title="SinglePlayer" FontFamily="20th Centenary Faux">
     <Page.Resources>
         <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
@@ -62,67 +62,65 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="titl" Content="iDiablo" Height="150" Width="600" Padding="0,0,0,0" Grid.Column="1" Grid.Row="1" FontFamily="Diablo" FontSize="125" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label x:Name="title" Content="" Height="144" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="title" Content="" Height="144" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-        <Label x:Name="level" Content="Level:" Height="108" Width="120" Grid.Column="0" Grid.Row="4" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Margin="64,0,0,0"/>
-        <Label x:Name="LevelLabel" Content="1" Height="108" Width="120" Grid.Column="0" Grid.Row="4" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Margin="184,0,0,0"/>
-        <Label x:Name="LevelLable" Content="" Height="108" Width="456"  Grid.Column="0" Grid.Row="4" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Margin="184,0,0,0"/>
+        <Label x:Name="level" Content="Lvl:" Height="108" Width="160" Grid.Column="1" Grid.Row="1" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="0,0,0,0"/>
+        <Label x:Name="LevelLabel" Content="1" Height="108" Width="160" Grid.Column="1" Grid.Row="1" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="160,0,0,0"/>
 
-        <Label Content="Exp:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="400,0,0,0" Grid.Row="4" Width="120"/>
-        <Label x:Name="LevelLabel_Copy" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="520,0,0,0" Grid.Row="4" Width="120" Content="0"/>
+        <Label x:Name="exp" Content="Exp:" Height="108" Width="160" Grid.Column="1" Grid.Row="1" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="320,0,0,0"/>
+        <Label x:Name="ExpLabel" Content="0" Height="108" Width="160" Grid.Column="1" Grid.Row="1" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="480,0,0,0"/>
 
-        <Label Content="Strenght:" Height="108" Width="185" Grid.Column="0" Grid.Row="5" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Margin="64,0,0,0"/>
-        <Label x:Name="StrenghLabel" Content="" VerticalAlignment="Center" Foreground="White" FontSize="40" Height="108" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="343,0,55,0" Grid.Row="5"/>
+        <Label x:Name="strengh" Content="Strenght:" Height="108" Width="320" Grid.Column="0" Grid.Row="4" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="0,0,0,0"/>
+        <Label x:Name="StrenghLabel" Content="" Height="108" Width="270" Grid.Column="0" Grid.Row="4" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="320,0,0,0"/>
 
-        <Label Content="Dexterity:" Height="108" Width="185" Grid.Column="0" Grid.Row="6" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Margin="64,0,0,0"/>
-        <Label x:Name="DexterityLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="343,0,0,0" Grid.Row="6" Width="242"/>
+        <Label x:Name="dexterity" Content="Dexterity:" Height="108" Width="320" Grid.Column="0" Grid.Row="5" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="0,0,0,0"/>
+        <Label x:Name="DexterityLabel" Content="" Height="108" Width="270" Grid.Column="0" Grid.Row="5" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="320,0,0,0"/>
 
-        <Label Content="Intelegence:" Height="108" Width="216" Grid.Column="0" Grid.Row="7" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Margin="64,0,0,0"/>
-        <Label x:Name="IntelegenceLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="40" Height="108" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="343,0,0,0" Grid.Row="7" Width="242"/>
+        <Label x:Name="intelegence" Content="Intelegence:" Height="108" Width="320" Grid.Column="0" Grid.Row="6" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="0,0,0,0"/>
+        <Label x:Name="IntelegenceLabel" Content="" Height="108" Width="270" Grid.Column="0" Grid.Row="6" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="320,0,0,0"/>
 
-        <Label Content="Vitality:" Height="108" Width="145" Grid.Column="0" Grid.Row="8" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Margin="64,0,0,0"/>
-        <Label x:Name="VitalityLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="40" Height="108" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="343,0,0,0" Grid.Row="8" Width="242"/>
+        <Label x:Name="vitality" Content="Vitality:" Height="108" Width="320" Grid.Column="0" Grid.Row="7" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="0,0,0,0"/>
+        <Label x:Name="VitalityLabel" Content="" Height="108" Width="270" Grid.Column="0" Grid.Row="7" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" Margin="320,0,0,0"/>
+        
+        <Button x:Name="StrenghtPlus" Content="+" Height="108" Width="50" Grid.Row="4" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="#00000000" Margin="590,0,0,0" MouseEnter="Sound_MouseEnter" Click="StrenghtPlus_Click" Visibility="Visible" RenderTransformOrigin="0.1,0.444"/>
+        <Button x:Name="DexterityPlus" Content="+" Height="108" Width="50" Grid.Row="5" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="#00000000" Margin="590,0,0,0" MouseEnter="Sound_MouseEnter" Click="DexterityPlus_Click" Visibility="Visible"/>
+        <Button x:Name="IntelegencePlus" Content="+" Height="108" Width="50" Grid.Row="6" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="#00000000" Margin="590,0,0,0" MouseEnter="Sound_MouseEnter" Click="IntelegencePlus_Click" Visibility="Visible"/>
+        <Button x:Name="VitalityPlus" Content="+" Height="108" Width="50" Grid.Row="7" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="#00000000" Margin="590,0,0,0" MouseEnter="Sound_MouseEnter" Click="VitalityPlus_Click" Visibility="Visible"/>
+        
+        <Label x:Name="healt" Content="Health:" Foreground="White" FontSize="40" Height="108" Width="320" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1"/>
+        <Label x:Name="HealtLabel" Content="0" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="320,0,0,0" Grid.Row="4" Width="320" Grid.Column="1"/>
 
-        <Button MouseEnter="Sound_MouseEnter" x:Name="IntelegencePlus" Content="+" Margin="593,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="108" FontSize="50" Click="IntelegencePlus_Click" Visibility="Hidden" Style="{StaticResource CustomButtonStyle}"/>
-        <Button MouseEnter="Sound_MouseEnter" x:Name="VitalityPlus" Content="+" HorizontalAlignment="Left" Margin="593,0,0,0" Grid.Row="8" VerticalAlignment="Center" Width="47" Height="108" FontSize="50" Click="VitalityPlus_Click" Visibility="Hidden" Style="{StaticResource CustomButtonStyle}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button MouseEnter="Sound_MouseEnter" x:Name="StrenghtPlus" Content="+" HorizontalAlignment="Left" Margin="593,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="47" Height="108" FontSize="50" Click="StrenghtPlus_Click" Visibility="Hidden" Style="{StaticResource CustomButtonStyle}"/>
-        <Button x:Name="DexterityPlus" Content="+" HorizontalAlignment="Left" Margin="593,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="47" Height="108" FontSize="50" Click="DexterityPlus_Click" Visibility="Hidden" Style="{StaticResource CustomButtonStyle}"/>
+        <Label x:Name="physycalDamage" Content="Physycal Damage:" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="5" Width="320" Grid.Column="1"/>
+        <Label x:Name="PhysycalDamageLabel" Content="0" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="320,0,0,0" Grid.Row="5" Width="320" Grid.Column="1"/>
 
-        <Label Content="Health:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="5" Width="141" Grid.Column="1" Margin="110,0,0,0"/>
-        <Label x:Name="HealtLabel" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="249,0,0,0" Grid.Row="5" Width="185" Grid.Column="1"/>
+        <Label x:Name="magicDamage" Content="Magic Damage:" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="6" Width="320" Grid.Column="1"/>
+        <Label x:Name="MagicDamageLabel" Content="0" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="320,0,0,0" Grid.Row="6" Width="320" Grid.Column="1"/>
 
-        <Label Content="Physycal Damage:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="6" Width="328" Grid.Column="1" Margin="110,0,0,0"/>
-        <Label x:Name="PhysycalDamageLabel" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="438,2,0,0" Grid.Row="6" Width="185" Grid.Column="1" Grid.RowSpan="2"/>
+        <Label x:Name="critDamage" Content="Crit Damage:" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="7" Width="320" Grid.Column="1"/>
+        <Label x:Name="CritDamageLabel" Content="0" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="320,0,0,0" Grid.Row="7" Width="320" Grid.Column="1"/>
 
-        <Label Content="Magic Damage:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="7" Width="282" Grid.Column="1" Margin="110,2,0,0" Grid.RowSpan="2"/>
-        <Label x:Name="MagicDamageLabel" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="392,0,0,0" Grid.Row="7" Width="185" Grid.Column="1"/>
+        <Label x:Name="mana" Content="Mana:" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="4" Width="320" Grid.Column="2"/>
+        <Label x:Name="ManaLabel" Content="0" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="320,0,0,0" Grid.Row="4" Width="320" Grid.Column="2"/>
 
-        <Label Content="Crit Damage:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="8" Width="254" Grid.Column="1" Margin="110,2,0,0" Grid.RowSpan="2"/>
-        <Label x:Name="CritDamageLabel" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="364,0,0,0" Grid.Row="8" Width="185" Grid.Column="1"/>
+        <Label x:Name="armor" Content="Armor:" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="5" Width="320" Grid.Column="2"/>
+        <Label x:Name="ArmorLabel" Content="0" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="320,0,0,0" Grid.Row="5" Width="320" Grid.Column="2"/>
 
-        <Label Content="Mana:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="5" Width="122" Grid.Column="2" Margin="44,0,0,0"/>
-        <Label x:Name="ManaLabel" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="166,0,0,0" Grid.Row="5" Width="184" Grid.Column="2"/>
+        <Label x:Name="magicDefence" Content="Magic Defence:" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="6" Width="320" Grid.Column="2"/>
+        <Label x:Name="MagicDefenceLabel" Content="0" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="320,0,0,0" Grid.Row="6" Width="320" Grid.Column="2"/>
 
-        <Label Content="Armor:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="6" Width="144" Grid.Column="2" Margin="44,0,0,0"/>
-        <Label x:Name="ArmorLabel" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="188,0,0,0" Grid.Row="6" Width="185" Grid.Column="2"/>
+        <Label x:Name="critChance" Content="Crit Chance:" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="7" Width="320" Grid.Column="2"/>
+        <Label x:Name="CritChanceLabel" Content="0" Foreground="White" FontSize="40" Height="108" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="320,0,0,0" Grid.Row="7" Width="320" Grid.Column="2"/>
 
-        <Label Content="Magic Defence:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="7" Width="302" Grid.Column="2" Margin="44,0,0,0"/>
-        <Label x:Name="MagicDefenceLabel" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="346,0,0,0" Grid.Row="7" Width="185" Grid.Column="2"/>
+        <Label x:Name="statPoints" Content="Stat Points:" Foreground="White" FontSize="40" Height="108" Width="320" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="1"/>
+        <TextBox x:Name="StatPoints" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="320" Height="108" FontSize="50" Background="{x:Null}" SelectionTextBrush="White" CaretBrush="White" Margin="320,0,0,0" HorizontalAlignment="Left"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="White" TextChanged="StatPoints_TextChanged"/>
 
-        <Label Content="Crit Chance:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="8" Width="243" Grid.Column="2" Margin="44,0,0,0"/>
-        <Label x:Name="CritChanceLabel" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Margin="287,0,0,0" Grid.Row="8" Width="186" Grid.Column="2"/>
+        <Image x:Name="ImageHero" HorizontalAlignment="Left" Width="380" Grid.Column="2" Margin="128,1,0,1" Grid.RowSpan="3" Grid.Row="1"/>
 
-        <Label Content="Stat Points:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="Papyrus" FontSize="40" Height="108" VerticalContentAlignment="Center" Grid.Row="3" Width="231" Grid.Column="1" Margin="43,0,0,0"/>
-        <TextBox x:Name="StatPoints" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="320" Height="106" FontSize="50" Background="{x:Null}" SelectionTextBrush="White" CaretBrush="White" Margin="274,0,0,0" VerticalContentAlignment="Center" Foreground="White" TextChanged="StatPoints_TextChanged"/>
+        <Button x:Name="Inventory" Grid.Column="2" Content="Inventory" HorizontalAlignment="Left" VerticalAlignment="Center" Height="108" Width="220" FontSize="50" Click="Inventory_Click" Margin="328,0,0,0"/>
 
-        <Image x:Name="ImageHero" HorizontalAlignment="Left" Height="216" Margin="72,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="444" Grid.RowSpan="2"/>
+        <Button x:Name="LoadSave" Grid.Column="2" Content="Load save" HorizontalAlignment="Left" VerticalAlignment="Center" Height="108" Width="257" Cursor="" FontSize="32" Click="LoadSave_Click"/>
 
-        <Button x:Name="Inventory" Grid.Column="1" Content="Inventory" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center" Height="108" Width="220" Style="{StaticResource CustomButtonStyle}" FontSize="50" Click="Inventory_Click"/>
-
-        <Button x:Name="LoadSave" Grid.Column="1" Content="Load save" HorizontalAlignment="Left" Margin="218,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="108" Width="247" Style="{StaticResource CustomButtonStyle}" Cursor="" FontSize="32" Click="LoadSave_Click"/>
-
-        <Button x:Name="Back" Content="↞" Height="150" Width="600" FontFamily="Diablo" FontSize="100" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}" FontWeight="Bold">
+        <Button x:Name="Back" Content="↞" Height="108" Width="100" FontFamily="Diablo" FontSize="75" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Back_Click" BorderBrush="{x:Null}" Background="{x:Null}" Style="{StaticResource ButtonStyle}" FontWeight="Bold" Margin="10,0,0,0">
             <Button.RenderTransform>
                 <ScaleTransform ScaleX="1" ScaleY="1" CenterX="300" CenterY="75"/>
             </Button.RenderTransform>
