@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iDiablo.Units;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,17 +64,20 @@ namespace iDiablo
 
         private void DoubleAnimation_Completed_War(object sender, EventArgs e)
         {
-            
+            NavigationService.Navigate(new SinglePlayer());
+            App.Current.Resources["HeroClass"] = warrior.Content;
         }
 
         private void DoubleAnimation_Completed_Rog(object sender, EventArgs e)
         {
-            
+            NavigationService.Navigate(new SinglePlayer());
+            App.Current.Resources["HeroClass"] = rogue.Content;
         }
 
         private void DoubleAnimation_Completed_Wiz(object sender, EventArgs e)
         {
-            
+            NavigationService.Navigate(new SinglePlayer());
+            App.Current.Resources["HeroClass"] = wizard.Content;
         }
         private void DoubleAnimation_Completed_Back(object sender, EventArgs e)
         {
